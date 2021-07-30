@@ -8,4 +8,4 @@ for (let i = 0; i < num.length; i++) {
 }
 
 result = String(result ** 3).substring(0, 2);
-console.log(result)
+console.log(result);
