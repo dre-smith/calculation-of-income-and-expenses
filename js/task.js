@@ -6,7 +6,7 @@ function yourExpenses() {
 }
 
 function yourAmount() {
-    let amount = +prompt('Во сколько это обойдется?');
+    let amount = +prompt('Во сколько это обойдётся?');
     return amount;
 }
 
@@ -32,7 +32,7 @@ let money = +prompt('Ваш месячный доход?'),
     amount1 = yourAmount(),
     expenses2 = yourExpenses(),
     amount2 = yourAmount(),
-    budgetMonth = money - (expenses1 + expenses2),
+    budgetMonth = money - (amount1 + amount2),
     budgetDay = Math.floor(budgetMonth / 30),
     target = Math.ceil(mission / budgetMonth),
     incomeLevel = yourIncomeLevel();
