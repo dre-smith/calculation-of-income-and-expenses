@@ -45,7 +45,7 @@ console.log(`Период равен ${period} месяцев`);
 console.log(`Цель заработать ${mission} рублей/долларов/гривен/юани`);
 console.log(`Бюджет на день: ${budgetDay}`);
 console.log(`Бюджет на месяц: ${budgetMonth}`);
-console.log(`Цель юудет достигнута за ${target} месяцев(-а)`);
+console.log(`Цель будет достигнута за ${target} месяцев(-а)`);
 console.log(`Статус дохода: ${incomeLevel}`);
 
 addExpenses = addExpenses.toLowerCase().split(', ');
