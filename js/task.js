@@ -1,7 +1,7 @@
 'use strict';
 
 function yourExpenses() {
-    let expenses = +prompt('Введите обязательную статью расходов?');
+    let expenses = prompt('Введите обязательную статью расходов?');
     return expenses;
 }
 
@@ -29,8 +29,8 @@ let money = +prompt('Ваш месячный доход?'),
     mission = 1000000,
     period = 12,
     expenses1 = yourExpenses(),
-    expenses2 = yourExpenses(),
     amount1 = yourAmount(),
+    expenses2 = yourExpenses(),
     amount2 = yourAmount(),
     budgetMonth = money - (expenses1 + expenses2),
     budgetDay = Math.floor(budgetMonth / 30),
