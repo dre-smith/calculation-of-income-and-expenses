@@ -44,7 +44,7 @@ addExpenses = addExpenses.toLowerCase().split(', ');
 showTypeOf(money);
 showTypeOf(income);
 showTypeOf(deposit);
-getExpensesMonth()
+getExpensesMonth();
 getTargetMonth();
 getStatusIncome();
 
