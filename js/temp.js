@@ -121,4 +121,4 @@ for (let key in appData) {
     console.log(key, appData[key]);
 }; */
 
-console.log(appData.addExpenses.map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(', '));
+console.log(appData.addExpenses);
