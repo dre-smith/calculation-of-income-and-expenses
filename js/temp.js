@@ -45,7 +45,8 @@ let appData = {
         }
     },
     getBudget: function () {
-        return appData.budgetMonth - appData.budgetDay;
+        appData.budgetMonth = appData.budget - appData.expensesMonth;
+        appData.budgetDay = appData.budgetMonth / 30;
     },
     getTargetMonth: function () {
         if (appData.mission / appData.getBudget() >= 0) {
@@ -53,7 +54,7 @@ let appData = {
         } else {
             alert('Цель не будет достигнута');
         }
-        return appData.mission / appData.getBudget();
+        return appData.mission / appData.budgetMonth;
     },
     getStatusIncome: function () {
         if (appData.budgetDay >= 1200) {
