@@ -31,5 +31,5 @@ setInterval(function () {
             };
         };
     document.querySelectorAll('div')[0].innerHTML = `Сегодня ${getCurrentDay()}, ${date.getDate()} ${сurrentMonth} ${date.getFullYear()} года, ${date.getHours()} ${getDeclension(date.getHours(), hours)} ${date.getMinutes()} ${getDeclension(date.getMinutes(), minutes)} ${date.getSeconds()} ${getDeclension(date.getSeconds(), seconds)}`;
-    document.querySelectorAll('div')[1].innerHTML = `${getZero(date.getDate())}.${getZero(date.getMonth())}.${date.getFullYear()} ${getZero(date.getHours())}.${getZero(date.getMinutes())}.${getZero(date.getSeconds())}`;
+    document.querySelectorAll('div')[1].innerHTML = `${getZero(date.getDate())}.${getZero(date.getMonth())}.${date.getFullYear()} - ${getZero(date.getHours())}:${getZero(date.getMinutes())}:${getZero(date.getSeconds())}`;
 }, 1000);
