@@ -79,18 +79,18 @@ let appData = {
             incomeItems[0].parentNode.removeChild(incomeItems[1]);
             incomeItems[0].parentNode.removeChild(incomeItems[2]);
         };
+        this.budget = 0;
+        this.budgetDay = 0;
+        this.budgetMonth = 0;
         this.income = {};
         this.incomeMonth = 0;
         this.addIncome = [];
         this.expenses = {};
+        this.expensesMonth = 0;
         this.addExpenses = [];
         this.deposit = false;
         this.percentDeposit = 0;
         this.moneyDeposit = 0;
-        this.budget = 0;
-        this.budgetDay = 0;
-        this.budgetMonth = 0;
-        this.expensesMonth = 0;
         start.style.display = 'block';
         cancel.style.display = 'none';
     },
