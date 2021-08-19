@@ -172,7 +172,7 @@ class AppData {
     getAddIncome() {
         const _this = this;
         additionalIncomeItem.forEach(function (item) {
-            let itemValue = item.value.trim();
+            const itemValue = item.value.trim();
             if (itemValue !== '') {
                 _this.addIncome.push(itemValue);
             };
