@@ -74,18 +74,12 @@ class AppData {
         periodSelect.value = 1;
         expensesPlus.style.display = 'block';
         incomePlus.style.display = 'block';
-        if (expensesItems.length === 2) {
-            expensesItems[0].parentNode.removeChild(expensesItems[1]);
-        } else if (expensesItems.length === 3) {
-            expensesItems[0].parentNode.removeChild(expensesItems[1]);
-            expensesItems[0].parentNode.removeChild(expensesItems[2]);
-        };
-        if (incomeItems.length === 2) {
-            incomeItems[0].parentNode.removeChild(incomeItems[1]);
-        } else if (incomeItems.length === 3) {
-            incomeItems[0].parentNode.removeChild(incomeItems[1]);
-            incomeItems[0].parentNode.removeChild(incomeItems[2]);
-        };
+        incomeItems.forEach((item, index) => {
+            if (index !== 0) item.remove()
+        });
+        expensesItems.forEach((item, index) => {
+            if (index !== 0) item.remove()
+        });
         this.budget = 0;
         this.budgetDay = 0;
         this.budgetMonth = 0;
@@ -195,17 +189,6 @@ class AppData {
     };
     getTargetMonth() {
         return targetAmount.value / this.budgetMonth;
-    };
-    getStatusIncome() {
-        if (this.budgetDay >= 1200) {
-            return 'У вас высокий уровень дохода';
-        } else if (this.budgetDay < 1200 && this.budgetDay >= 600) {
-            return 'У вас средний уровень дохода';
-        } else if (this.budgetDay < 600 && this.budgetDay >= 0) {
-            return 'К сожалению, у вас уровень дохода ниже среднего';
-        } else {
-            return 'Что-то пошло не так';
-        };
     };
     calcPeriod() {
         return this.budgetMonth * periodSelect.value;
